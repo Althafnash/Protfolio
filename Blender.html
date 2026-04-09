@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blender Projects - Althaf</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #0a0f1a;
+        color: #cce0ff;
+        overflow-x: hidden;
+      }
+
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, #0d1b33, #0a0f1a);
+        padding: 15px 20px;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        border-bottom: 2px solid #1e3a8a;
+        box-shadow: 0 0 20px #1e3a8a;
+      }
+
+      header a {
+        color: #66b0ff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      header a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: #00f0ff;
+        transition: 0.3s;
+      }
+
+      header a:hover::after {
+        width: 100%;
+      }
+      header a:hover {
+        color: #00f0ff;
+      }
+
+      .carousel-container {
+        position: relative;
+        margin-top: 80px;
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+      }
+
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        background: #0a0f1a;
+        box-sizing: border-box;
+      }
+
+      .media-side {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #111a2c;
+      }
+
+      .media-side img,
+      .media-side video {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow:
+          0 0 20px #00f0ff,
+          0 0 40px #66b0ff inset;
+      }
+
+      .desc-side {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #0a0f1a;
+      }
+
+      .desc-side h2 {
+        font-size: 2em;
+        color: #00f0ff;
+        margin-bottom: 20px;
+        text-shadow:
+          0 0 10px #00f0ff,
+          0 0 20px #66b0ff;
+      }
+
+      .desc-side p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #cce0ff;
+      }
+
+      button.prev,
+      button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 30, 60, 0.5);
+        border: none;
+        color: #00f0ff;
+        font-size: 2em;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00f0ff;
+        transition: all 0.3s;
+      }
+
+      button.prev:hover,
+      button.next:hover {
+        background: rgba(0, 30, 60, 0.8);
+        box-shadow:
+          0 0 20px #00f0ff,
+          0 0 30px #66b0ff inset;
+      }
+
+      button.prev {
+        left: 20px;
+      }
+      button.next {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="Home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Connect</a>
+      <a href="Blender.html">3D Projects</a>
+    </header>
+
+    <div class="carousel-container">
+      <div class="carousel-slide" id="carouselSlide">
+        <!-- Slide 1: Image -->
+        <div class="carousel-item">
+          <div class="media-side">
+            <img src="./Gingerbread.png" alt="Blender Project 1" />
+          </div>
+          <div class="desc-side">
+            <h2>Gingerbread House</h2>
+            <p>
+              I completed the Gingerbread House tutorial by Polygon Runway,
+              creating a stylized 3D scene that combined modeling, texturing,
+              and artistic detailing. Through this project, I learned to use
+              displacement for surface detail, decorate with grease pencil and
+              curves, apply colors and materials effectively, and compose a
+              visually engaging scene—building my confidence in creating
+              creative and detailed Blender environments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Image -->
+        <div class="carousel-item">
+          <div class="media-side">
+            <img src="./Retro Telephone.png" alt="Blender Project 2" />
+          </div>
+          <div class="desc-side">
+            <h2>Retro Telephone</h2>
+            <p>
+              I completed the Retro Phone tutorial by Polygon Runway, creating a
+              stylized 3D object in Blender. This project helped me master
+              practical modeling techniques, including using modifiers like
+              Boolean, curve deform methods, and efficient workflow strategies,
+              while emphasizing clean modeling and scene setup. Each small
+              project like this strengthens my ability to turn simple shapes
+              into detailed, creative designs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3: Video -->
+        <div class="carousel-item">
+          <div class="media-side">
+            <video src="./Island.mp4" controls></video>
+          </div>
+          <div class="desc-side">
+            <h2>Island</h2>
+            <p>
+              I explored Blender by creating my first animation featuring a sea
+              with floating islands. This project taught me the fundamentals of
+              animation, scene composition, and 3D storytelling, while also
+              enhancing my creativity and patience. It was my first full
+              animation attempt, and the experience sparked a deeper interest in
+              3D design, animation, and visual storytelling.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4: Video -->
+        <div class="carousel-item">
+          <div class="media-side">
+            <video src="./Donut.mp4" controls></video>
+          </div>
+          <div class="desc-side">
+            <h2>Donut</h2>
+            <p>
+              I completed the 14-video Blender Beginner Course by Blender Guru,
+              gaining hands-on experience in 3D modeling, materials, lighting,
+              camera setup, rendering, and basic animation. This course
+              strengthened my skills in creating realistic 3D scenes and
+              animations, giving me a solid foundation to build and showcase
+              creative projects in Blender.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5: Video -->
+        <div class="carousel-item">
+          <div class="media-side">
+            <video src="./Lamp.mkv" controls></video>
+          </div>
+          <div class="desc-side">
+            <h2>Lamp</h2>
+            <p>
+              I completed a 22-minute Blender tutorial by Polygon Runway,
+              learning to create stylized low-poly 3D scenes with effective use
+              of shapes, colors, materials, and lighting. This hands-on
+              experience enhanced my workflow and understanding of scene
+              composition, helping me build more creative and visually engaging
+              3D projects in Blender.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+      const slide = document.getElementById("carouselSlide");
+      const slides = document.querySelectorAll(".carousel-item");
+      let index = 0;
+
+      function showSlide(i) {
+        slide.style.transform = `translateX(-${i * 100}%)`;
+      }
+
+      function nextSlide() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }
+
+      function prevSlide() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      }
+    </script>
+  </body>
+</html>

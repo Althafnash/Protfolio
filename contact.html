@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect - Althaf</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #0a0f1a;
+        color: #cce0ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, #0d1b33, #0a0f1a);
+        padding: 15px 20px;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        border-bottom: 2px solid #1e3a8a;
+        box-shadow: 0 0 20px #1e3a8a;
+      }
+
+      header a {
+        color: #66b0ff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      header a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: #00f0ff;
+        transition: 0.3s;
+      }
+
+      header a:hover::after {
+        width: 100%;
+      }
+      header a:hover {
+        color: #00f0ff;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #00f0ff;
+        margin-bottom: 40px;
+        text-shadow:
+          0 0 10px #00f0ff,
+          0 0 20px #66b0ff;
+      }
+
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: #cce0ff;
+        font-size: 1.5em;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background: rgba(0, 30, 60, 0.6);
+        box-shadow:
+          0 0 15px #1e3a8a,
+          0 0 25px #00f0ff30 inset;
+        transition: all 0.3s;
+      }
+
+      .social-links a:hover {
+        background: rgba(0, 30, 60, 0.8);
+        color: #00f0ff;
+        box-shadow:
+          0 0 20px #00f0ff,
+          0 0 30px #66b0ff inset;
+        transform: scale(1.05);
+      }
+
+      .social-links img {
+        width: 35px;
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="Home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Connect</a>
+      <a href="Blender.html">3D Projects</a>
+    </header>
+
+    <h1>Connect with Me</h1>
+
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
+          alt="GitHub"
+        />
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+          alt="LinkedIn"
+        />
+        LinkedIn
+      </a>
+
+      <a href="mailto:your.email@example.com">
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"
+          alt="Email"
+        />
+        Email
+      </a>
+    </div>
+  </body>
+</html>
